@@ -1,0 +1,417 @@
+*{padding: 0; margin: 0;box-sizing: border-box;}
+body{
+    height: 100%; 
+    background: #222121;
+    place-items: center;
+    overflow: hidden;
+}
+header{
+    background: url('background.jpg');
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 100% / 30%;
+}
+header .overlay{
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    color: #000000;
+    text-shadow: 2px 2px 2px #695b8e;
+    background-image: linear-gradient(135deg #42f5ec 20%, #2cb4de 100%);
+}
+button{
+    position: fixed;
+    height: 50px;
+    width:200px;
+    margin: 0 35px;
+    text-align: center;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: #000000;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    justify-content: center;
+}
+button:first-child:hover{
+    background: linear-gradient(90deg, #f2e30c, #8f9604, #08ff46, #08ed8a,#0cf2ee, #05a4fa, #027cff, #3d08ff,#63039b, #d608ff, #ff08f7, #e404a4, #ff0080, #f50119, #ff3508, #f76f07);
+    background-size: 400%;
+}
+button:first-child::before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity .5s;
+}
+button:hover:first-child{
+    opacity: 1;
+    z-index: -1;
+}
+button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+@keyframes glow{
+    0%{background-position: 0%;}
+    100%{background-position: 400%;}
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.menu{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+.menu a{
+    margin: 30px 0;
+}
+.menu i{
+    font-size: 32px;
+}
+.page{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#p1{
+    width: 100%;
+    background: #201932;
+    left: 0;
+}
+#p2{
+    background: #2bbef2;
+}
+#p3{
+    background: #000000;
+}
+#p4{
+    background: #ea37a3;
+}
+#p2,#p3, #p4{
+    width: 90%;
+    left: 10%;
+    transform: translateX(190%);
+}
+.menu a{
+    transition: all .5s ease-out;
+    color: white;
+}
+.menu a :hover{
+    opacity: 0,25;
+}
+.page{
+    font-family: 'Monsterrat', sans-serif;
+    color: white;
+}
+.page i{
+    font-size: 80px;
+}
+.page h2{
+    font-size: 36px;
+    line-height: 2;
+}
+.page span{
+    font-size: 17px;
+}
+.page {
+    transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+}
+#t2:target #p2,
+#t3:target #p3,
+#t4:target #p4{
+    transform: translateX(0%);
+    transition-delay: .25s !important;
+}
+#t2:target #p1,
+#t3:target #p1,
+#t4:target #p1{
+    background: #254558;
+    filter: blur(3px);
+}
+#t2:target .menu a,
+#t3:target .menu a,
+#t4:target .menu a{
+    transform: scale(.6);
+    transition-delay: .5s;
+}
+#t2:target .menu .two,
+#t3:target .menu .three,
+#t4:target .menu .four{
+    transform: scale(1.6);
+}
+.page span a{
+    color: yellow;
+    transition: all250ms ease-out;
+}
+.page span a:hover{
+    color: white;
+}
+.page .wrap{
+    width: 50%;
+    transform: translateX(200%);
+    transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+.page#p1 .wrap{
+    transform: translateX(0%);
+}
+#t2:target .page#p2 .wrap,
+#t3:target .page#p3 .wrap,
+#t4:target .page#p4 .wrap{
+    transform: translateX(0%);
+    transition-delay: 1st;
+}
+.polaroid{
+    width:200px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 #3e3459, 0 6px 20px 0 #1b1726;
+    margin-bottom: 5px;
+}
+#tit{
+    text-align: center; 
+    padding: 10px 20px;
+    color: black;
+    width: 950px;
+    height: 400px;
+    background: white;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0 solid rgba(0, 0, 0, 0.8);
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+  }
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  .center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .box{
+      width: 300px;
+      height: 300px;
+      background-color: #494d5f;
+      color: white;
+      box-shadow: 10px 10px 10px #0d081c;
+      position: relative;
+      flex-direction: column;
+      overflow: hidden;
+  }
+  .box img, .box i{
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      transition: all 1s;
+  }
+  .box:hover img, .box:hover i{
+      top: 10px;
+      left: 40px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+  }
+  .box h4{
+      margin: 0x 0px 0px 0px;
+      transform: translateY(200px);
+      transition: all 1.1s;
+  }
+  .box p{
+      margin: 0px 30px 0px 30px;
+      transform: translateY(200px);
+      transition: all 1.1s;
+  }
+  .box:hover h4{
+    transform: translateY(0px);
+  }
+  .box:hover p{
+    transform: translateY(0px);
+  }
+  .resume .func .interests {
+  background: black;
+  margin: 15px 0 0;
+  padding: 15px;
+}
+.resume .func .interests-items {
+  box-sizing: border-box;
+  padding: 0 0 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.resume .func .interests-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.resume .func .interests-items div:hover i {
+  transform: scale(1.2);
+}
+.resume .func .interests-items div:hover span {
+  color: yellow;
+  transition-duration: 0.3s;
+}
+.resume .func .interests-items div i {
+  font-size: 45px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: orange;
+  transition-duration: 0.3s;
+}
+.resume .func .interests-items div span {
+  display: block;
+}
+.shadow
+{
+    position: relative;
+    align-content: center;
+    margin: 0;
+    width: 800px;     
+    height: 400px;
+    background: linear-gradient(0deg,rgb(9, 225, 221),#d53e3e);
+}
+.shadow::before,
+.shadow::after
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+.shadow::after
+{
+    filter: blur(20px);
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+    50%
+    {
+        background-position: 300% 0;
+    }
+    100%
+    {
+        background-position: 0 0;
+    }
+}
+ul {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    position: relative;
+    width:60px;
+    height:60px;
+    display:block;
+    text-align:center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+  }
+  
+  ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration:none;
+  }
+  
+  ul li a .fab {
+    widht: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+  }
+  
+  ul li:nth-child(1) a:hover .fab {
+    color: #3b5998;
+  }
+  
+  ul li:nth-child(2) a:hover .fab {
+    color: #00aced;
+  }
+  
+  ul li:nth-child(3) a:hover .fab {
+    color: #dd4b39;
+  }
+  
+  ul li:nth-child(4) a:hover .fab {
+    color: #007bb6;
+  }
+  
+  ul li:nth-child(5) a:hover .fab {
+    color: #e4405f;
+  }
+  
